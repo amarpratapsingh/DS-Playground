@@ -1,0 +1,26 @@
+//A unique name for a given workspace(easier naming convention and same variable name)
+#include <iostream>
+namespace first
+{
+    int x = 1;
+}
+namespace second
+{
+    int x = 2;
+}
+// int main()
+// {
+//     int x = 0;
+//     std::cout<<x<<std::endl;
+//     std::cout<<first::x<<std::endl;
+//     std::cout<<second::x<<std::endl;
+//     return 0;
+// }
+
+//or
+
+int main()
+{
+    using namespace first;
+    std::cout<<x<<std::endl;
+}
