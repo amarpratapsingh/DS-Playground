@@ -3,6 +3,7 @@
 int main()
 {
     using std::cout;
+    using std::cin;
     using std::endl;
     int val1 = 10;
     int val2 = 20;
