@@ -1,59 +1,82 @@
 #include<bits/stdc++.h>
 using namespace std;
-// void N_times(int n)
-// {    
-//     if(myCount == n)
-//     {
-//         return;
-//     }
-//     cout<<myCount<<" ";
-//     myCount++;
-//     N_times(n);
-// }
-void N_names(int curr, int n, string s)
+void N_times(int curr, int val)
 {
-    if(curr > n)
+
+    if(curr > val)
     {
         return;
     }
-    cout<<s<<endl;
+    cout<<val<<" "<<endl;
     curr++;
-    N_names(curr, n, s);
+    N_times(curr,val);
 }
-void Count_asc(int curr, int n)
+void N_Names(int curr, int val, string name)
 {
-    if(curr > n)
+    if(curr > val)
     {
         return;
     }
-    cout<<curr<<" ";
+    cout<<name<<endl;
     curr++;
-    Count_asc(curr, n);
+    N_Names(curr,val,name);
 }
-void Count_desc(int curr)
+void Count_asc(int curr, int val)
+{
+    if(curr > val)
+    {
+        return;
+    }
+    cout<<curr<<" "<<endl;
+    curr++;
+    Count_asc(curr,val);
+}
+void Count_desc(int val)
+{
+    if(val < 1)
+    {
+        return;
+    }
+    cout<<val<<" "<<endl;
+    val--;
+    Count_desc(val);
+}
+void Sum(int curr, int sum)
 {
     if(curr < 1)
     {
+        cout<<sum<<endl;
         return;
     }
-    cout<<curr<<" ";
-    curr--;
-    Count_desc(curr);
+    Sum(curr-1,sum+curr);
 }
-void Sum(int i, int sum)
+void Fact(int curr, int fact)
 {
-    if(i<1)
+    if(curr < 1)
     {
-        cout<<sum;
+        cout<<fact<<endl;
         return;
     }
-    Sum(i-1, sum+i);
+    Fact(curr-1,fact*curr);
+}
+void Reverse(int arr[], int size)
+{
+    
+}
+void Palindrome()
+{
+
+}
+void Fibonacci()
+{
+
 }
 int main()
 {
-    int num;
-    string name;
+    int num,curr;
     cin>>num;
-    Sum(num,0);
+    //Sum(num,0);
+    //Fact(num,1);
+    
     return 0;
 }
